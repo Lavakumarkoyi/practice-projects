@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Checking through checkboxes
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      .img-class {
+        transform: scaleY(1);
+        background-color: red;
+        transition: 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" class="Image1" />Imagel<br />
+    <input type="checkbox" class="Image2" />Image2<br />
+    <input type="checkbox" class="Image3" />Image3<br />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 first">
+          <a href="../img/hotel-1.jpg"
+            >hotel-1
+            <img
+              src="../img/hotel-1.jpg"
+              class="img-thumbnail img-responsive"
+            />
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 second">
+          <a href="../img/hotel-1.jpg"
+            >hotel-1
+            <img
+              src="../img/hotel-1.jpg"
+              class="img-thumbnail img-responsive"
+            />
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 third">
+          <a href="../img/hotel-1.jpg"
+            >hotel-1
+            <img
+              src="../img/hotel-1.jpg"
+              class="img-thumbnail img-responsive"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".Image1").addEventListener("click", function(e) {
+        //e.preventDefault();
+        //var a = document.querySelector(".Image1");
+        var b = document.querySelector(".first");
+        b.classList.toggle("img-class");
+      });
+
+      document.querySelector(".Image2").addEventListener("click", function(e) {
+        //e.preventDefault();
+        //var a = document.querySelector(".Image1");
+        var b = document.querySelector(".second");
+        b.classList.toggle("img-class");
+      });
+
+      document.querySelector(".Image3").addEventListener("click", function(e) {
+        //e.preventDefault();
+        //var a = document.querySelector(".Image1");
+        var b = document.querySelector(".third");
+        b.classList.toggle("img-class");
+      });
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
