@@ -1,0 +1,23 @@
+@media screen and (max-width: 900px) {
+  div .one {
+    width: 47.5%;
+  }
+  div .two {
+    width: 47.5%;
+    margin: 0;
+  }
+  div .three {
+    clear: both;
+    width: auto;
+    margin: 0;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div .one-third {
+    width: auto;
+    float: none;
+    margin-right: 0;
+  }
+}

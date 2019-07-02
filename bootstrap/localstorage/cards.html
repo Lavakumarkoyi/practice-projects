@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      local storage
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div
+          class="col-sm-6 col-lg-6 col-md-6 col-xs-12 offset-lg-3 offset-md-2"
+        >
+          <form>
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control ncards"
+                placeholder="number of cards"
+              />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="button">submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row rcard">
+        <!--<div class="col-sm-6 col-lg-3 col-md-4 col-xs-12 parent"></div>
+      </div>-->
+    </div>
+    <script>
+      document.querySelector(".btn").addEventListener("click", function(e) {
+        e.preventDefault();
+        var a = document.querySelector(".ncards");
+
+        var b = parseInt(a.value);
+
+        var c = document.querySelector(".rcard");
+
+        //for (var i = 0; i < b; i++) {
+
+        /*var d = `
+              <div class="card-header">
+                Lavakumar
+              </div>
+              <div class="card-body">
+                HI my name is lavakumar.I am studying in lovely professional university
+              </div>
+              `;*/
+        //}
+
+        for (var i = 0; i < b; i++) {
+          var d = document.createElement("div");
+          d.className = "card";
+          d.classList.add("mb-2")
+
+          var e = document.createElement("div");
+          e.className = "card-title";
+
+          var f = document.createTextNode("Lavakumar");
+
+          e.appendChild(f);
+
+          var g = document.createElement("div");
+          g.className = "card-body";
+
+          var h = document.createTextNode(
+            "Hi my name is lavakumar and i am studying in lovely professional university"
+          );
+
+          var j = document.createElement("div");
+          j.classList.add("col-sm-6", "col-lg-3", "col-md-4");
+
+          d.appendChild(e);
+
+          d.appendChild(g);
+
+          g.appendChild(h);
+
+          //c.appendChild(d);
+
+          j.appendChild(d);
+
+          c.appendChild(j);
+        }
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

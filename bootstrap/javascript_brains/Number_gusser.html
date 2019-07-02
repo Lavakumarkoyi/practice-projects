@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      NUMBER GUESSER
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-6 col-lg-6 col-md-6 offset-lg-3 offset-md-2">
+          <div class="row mb-1">
+            <button class="btn btn-primary col-2 ml-1">1</button>
+            <button class="btn btn-primary col-2 ml-1">2</button>
+            <button class="btn btn-primary col-2 ml-1">3</button>
+          </div>
+
+          <div class="row mb-1">
+            <button class="btn btn-primary col-2 ml-1">4</button>
+            <button class="btn btn-primary col-2 ml-1">5</button>
+            <button class="btn btn-primary col-2 ml-1">6</button>
+          </div>
+
+          <div class="row mb-1">
+            <button class="btn btn-primary col-2 ml-1">7</button>
+            <button class="btn btn-primary col-2 ml-1">8</button>
+            <button class="btn btn-primary col-2 ml-1">9</button>
+          </div>
+        </div>
+      </div>
+
+      <!--<button class="btn btn-primary">true</button>-->
+    </div>
+    <script>
+      var count = 0;
+      document.querySelector(".row").addEventListener("click", function(e) {
+        var d, score;
+        count = count + 1;
+        if (e.target.classList.contains("btn")) {
+          d = Math.floor(Math.random() * 9) + 1;
+          console.log(d);
+
+          var a = parseInt(e.target.textContent);
+
+          if (d === a) {
+            console.log("true");
+            console.log(100 / count);
+            document.innerHTML = '<button class="btn btn-danger">true</button>';
+            count = 0;
+          } else if (d !== a) {
+            console.log("false");
+          }
+        }
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      FORM TYPES
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <form style="width:50%;margin:auto">
+            <div class="form-group row">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control uf"
+                  placeholder="FIRSTNAME"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control ul"
+                  placeholder="LASTNAME"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control pf"
+                placeholder="PASSWORD"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control pl"
+                placeholder="CONFIRM PASSWORD"
+              />
+              <span></span>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control dp">
+                <option value="one">MALE</option>
+                <option value="two">FEMALE</option>
+                <option value="three">TRANS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" class="form-check-inline terms" />ACCEPT
+              TERMS AND CONDITIONS
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">SIGNUP</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      /*document.querySelector(".btn").addEventListener("keydown", function(e) {
+        e.preventDefault();
+        var a = document.querySelector(".uf");
+        var b = document.querySelector(".ul");
+        var c = document.querySelector(".pf");
+        var d = document.querySelector(".pl");
+        var e = document.querySelector(".dp");
+        var f = document.querySelector(".terms");
+
+        if (a.value.length === 0) {
+          a.classList.add("is-invalid");
+        } else if (a.value.length > 0) {
+          a.classList.add("is-valid");
+        }
+
+        if (b.value.length === 0) {
+          b.classList.add("is-invalid");
+        } else if (b.value.length > 0) {
+          b.classList.add("is-valid");
+        }
+
+        if (c.value.length < 8) {
+          c.classList.add("is-invalid");
+        } else if (c.value.length >= 8) {
+          c.classList.add("is-valid");
+        }
+
+        if (d.value.length > 8) {
+          if (d.value === c.value) {
+            d.classList.add("is-valid");
+          } else if (d.value !== c.value) {
+            d.classList.add("is-invalid");
+          }
+        } else if (d.value.length < 8) {
+          d.classList.add("is-invalid");
+        }
+
+        e.classList.add("is-valid");
+
+        if (f.checked === false) {
+          f.classList.add("is-invalid");
+        }
+
+        });*/
+
+      document.querySelector(".uf").addEventListener("keyup", function(e) {
+        if (
+          document.querySelector(".uf").value.length < 8 &&
+          document.querySelector(".uf").value.length > 0
+        ) {
+          document.querySelector(".uf").classList.add("is-invalid");
+        } else if (document.querySelector(".uf").value.length >= 8) {
+          document.querySelector(".uf").classList.remove("is-invalid");
+          document.querySelector(".uf").classList.add("is-valid");
+        } else if (document.querySelector(".uf").value.length == 0) {
+          document.querySelector(".uf").classList.remove("is-invalid");
+          document.querySelector(".uf").classList.remove("is-valid");
+        }
+      });
+
+      document.querySelector(".ul").addEventListener("keyup", function(e) {
+        if (
+          document.querySelector(".ul").value.length < 8 &&
+          document.querySelector(".ul").value.length > 0
+        ) {
+          document.querySelector(".ul").classList.add("is-invalid");
+        } else if (document.querySelector(".ul").value.length >= 8) {
+          document.querySelector(".ul").classList.remove("is-invalid");
+          document.querySelector(".ul").classList.add("is-valid");
+        } else if (document.querySelector(".ul").value.length == 0) {
+          document.querySelector(".ul").classList.remove("is-invalid");
+          document.querySelector(".ul").classList.remove("is-valid");
+        }
+      });
+
+      document.querySelector(".pf").addEventListener("keyup",function(e){
+        var a = document.querySelector(".pf");
+
+        
+      })
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

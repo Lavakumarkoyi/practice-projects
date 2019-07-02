@@ -1,0 +1,43 @@
+function createObject(name,age,dept){
+  this.name = name,
+  this.age = age,
+  this.dept = dept
+}
+
+function newBicycle(name,speed,gear){
+  var bicycle={}
+  bicycle.name = name,
+  bicycle.speed = speed,
+  bicycle.gear = gear
+  return bicycle;
+}
+
+var emp1 = new createObject("Lavakumar",20,"CSE");
+console.log(emp1);
+
+new createObject("Ravi",20,"ECE");
+
+var emp2 = new createObject("Rajesh",20,"CSE");
+console.log(emp2);
+
+new createObject("Pankaj",20,"CSE");
+
+var emp3 = createObject("Ram",45,"ECE");
+
+console.log(emp3);
+
+var bicycle1 = new newBicycle("Hercules",40,5);
+
+console.log(bicycle1);
+
+
+
+
+
+
+
+
+
+
+
+

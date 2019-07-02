@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      classes in javascript
+    </title>
+  </head>
+  <body>
+    <h1>CLASSES IN JAVASCRIPT</h1>
+    <script>
+      /*class rectangle {
+        Area(_length, _breadth) {
+          this.length = _length;
+          this.breadth = _breadth;
+          this.area = this.length * this.breadth;
+
+          console.log(this.area);
+        }
+      }
+
+      var rectangle1 = new rectangle();
+
+      console.log(rectangle1.Area(5, 8));*/
+
+      //getters and setters
+
+      class square {
+        constructor(_width) {
+          this.width = _width;
+          this.height = _width;
+        }
+
+        Area() {
+          return this.width * this.height;
+        }
+      }
+
+      var rectangle1 = new square(5);
+    </script>
+  </body>
+</html>

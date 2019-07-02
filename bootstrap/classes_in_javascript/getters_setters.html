@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Getters and Setters
+    </title>
+  </head>
+  <body>
+    <h1>GETTERS AND SETTERS</h1>
+    <script>
+      //getter and setters with normal programming
+
+      /*var myObj = {
+        firstname: "Lavakumar",
+        lastname: "koyi",
+        //fullname: myObj.firstname + myObj.lastname
+
+        get fullname() {
+          console.log(this.firstname + this.lastname);
+        },
+
+        set fullname(value) {
+          const two = value.split(" ");
+
+          this.firstname = two[0];
+          this.lastname = two[1];
+        }
+      };
+
+      //console.log(myObj.firstname);
+
+      myObj.fullname = "Rajesh Redrowthu";
+
+      console.log(myObj.fullname);*/
+
+      //getters and setters and with classes
+
+      /*class rectangle {
+        constructor(_width, _height) {
+          (this.width = _width), (this.height = _height);
+        }
+
+        set Newwidth(value) {
+          this.width = value;
+        }
+
+        set Newheight(value) {
+          this.height = value;
+        }
+
+        get area() {
+          return this.width * this.height;
+        }
+      }
+
+      var rec = new rectangle(20, 80);
+
+      rec.Newwidth = 700;
+      rec.Newheight = 96;
+
+      console.log(rec.area);*/
+
+      //static methods in classes
+
+      class square {
+        constructor(_height, _width) {
+          (this.height = _height), (this.width = _width);
+        }
+
+        static area() {
+          console.log(this.width * this.height);
+        }
+      }
+
+      var sq = new square(10, 30);
+
+      area();
+    </script>
+  </body>
+</html>
